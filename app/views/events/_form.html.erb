@@ -1,0 +1,70 @@
+<%= form_with(model: event, :html => {:class => "row g-3"}) do |form| %>
+  <% if event.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+        <% event.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-md-6">
+    <%= form.label :photo_file_name, style: "display: block" %>
+    <%= form.text_field :photo_file_name, class:"form-control col-md-4" %>
+  </div>
+
+  <div class="col-md-6">
+    <%= form.label :organizer, style: "display: block" %>
+    <%= form.text_field :organizer, class:"form-control" %>
+  </div>
+
+  <div class="col-md-6">
+    <%= form.label :phone_number, style: "display: block" %>
+    <%= form.text_field :phone_number, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :title, style: "display: inline" %>
+    <%= form.text_field :title, class:"form-control" %>
+  </div>
+
+  <div class="col-md-4">
+    <%= form.label :event_type, style: "display: inline" %>
+    <%= form.text_field :event_type, class:"form-control" %>
+  </div>
+
+  <div class="col-md-4">
+    <%= form.label :date_time, style: "display: block" %>
+    <%= form.datetime_field :date_time, class:"form-control" %>
+  </div>
+
+  <div class="col-md-4">
+    <%= form.label :participant_count, style: "display: inline" %>
+    <%= form.number_field :participant_count, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area:description, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :address, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :directions, style: "display: block" %>
+    <%= form.text_field :directions, class:"form-control" %>
+  </div>
+
+  <br/>
+
+  <div class="col-12">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+
+<% end %>

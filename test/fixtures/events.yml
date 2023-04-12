@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  photo_file_name: MyString
+  organizer: MyString
+  phone_number: MyString
+  title: MyString
+  type: 
+  date_time: 2023-04-12 15:55:09
+  description: MyString
+  participant_count: 1
+  address: MyString
+  directions: MyString
+
+two:
+  photo_file_name: MyString
+  organizer: MyString
+  phone_number: MyString
+  title: MyString
+  type: 
+  date_time: 2023-04-12 15:55:09
+  description: MyString
+  participant_count: 1
+  address: MyString
+  directions: MyString
