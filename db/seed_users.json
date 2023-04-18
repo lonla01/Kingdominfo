@@ -1,25 +1,30 @@
 [
     {
+        "pseudo": "Patrice",
         "email": "patlonla@yahoo.com",
         "password": "patrice",
         "password_confirmation": "patrice"
     }, 
     {
+        "pseudo": "Serge",
         "email": "splonla@gmail.com",
         "password": "serge1",
         "password_confirmation": "serge1"
     },
     {
+        "pseudo": "Cedric",
         "email": "lonla01@internet.lu",
         "password": "serge2",
         "password_confirmation": "serge2"
     },
     {
+        "pseudo": "Joelle",
         "email": "joelle.tiabou.3@gmail.com",
         "password": "logpom1",
         "password_confirmation": "logpom1"
     },
     {
+        "pseudo": "Annick",
         "email": "annick.tsangeu.4@gmail.com",
         "password": "logpom2",
         "password_confirmation": "logpom2"

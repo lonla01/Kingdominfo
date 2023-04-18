@@ -79,6 +79,8 @@ class Seed
   def self.seed_initial_events
     puts 'Seeding initial events'
     inital_events = []
+    users = Seed.seed_initial_users
+    user_index = 0
     
     # Opening the json file to read the data
     json_file = File.open Seed.seed_events_filename
@@ -88,7 +90,10 @@ class Seed
     
     initial_event_json_array.each do |event_hash|
         event = Event.create(event_hash)
+        event.organizer = users[user_index]
+        user_index += 1
         inital_events << event
+        event.save
     end
 
     puts "Event count == #{inital_events.size}"
@@ -107,15 +112,17 @@ class Seed
     initial_user_json_array.each do |user_hash|
         user = User.create(user_hash)
         initial_users << user
+        user.save
     end
 
 
     #all_users << create_article(file)
     puts "User count == #{initial_users.size}"
+
+    initial_users
   end
 end
 
-#Event.delete_all
-#User.delete_all
-Seed.seed_initial_users
+Event.delete_all
+User.delete_all
 Seed.seed_initial_events

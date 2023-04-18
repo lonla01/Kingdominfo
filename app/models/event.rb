@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+    belongs_to :organizer, class_name: "User"
 
     def date
         date_time.strftime("%a %d %b") unless date_time.nil?
