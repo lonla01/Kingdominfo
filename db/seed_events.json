@@ -1,0 +1,62 @@
+[
+    {
+        "photo_file_name": "pict_1.jpg",                                              
+        "phone_number": "697367956",                                                  
+        "title": "Sortie Montagne",                                                   
+        "event_type": "Plein air",                                                            
+        "date_time": "Fri, 14 Apr 2023 16:30:00.000000000 UTC +00:00",                  
+        "description": "Explorons le Jura",                                           
+        "participant_count": 10,   
+        "address": "Geneve",
+        "directions": "Route de Crepy",
+        "organizer": "Unknown"
+    },                                                 
+    {
+        "photo_file_name": "pict_2.jpg",
+        "phone_number": "697367956",
+        "title": "Vide Grenier",
+        "event_type": "Commercial",
+        "date_time": "Sat, 15 Apr 2023 16:36:00.000000000 UTC +00:00",
+        "description": "Vide grenier à Fernay",
+        "participant_count": 6,
+        "address": "Fernay",
+        "directions": "Gare",
+        "organizer": "Unknown"
+    },
+    {
+        "photo_file_name": "pict_3.jpg",
+        "phone_number": "697367956",
+        "title": "Vide Grenier",
+        "event_type": "Commercial",
+        "date_time": "Sat, 20 May 2023 00:00:00.000000000 UTC +00:00",
+        "description": "Vide grenier à Fernay",
+        "participant_count": 11,
+        "address": "Fernay",
+        "directions": "Gare",
+        "organizer": "Unknown"
+    },
+    {
+        "photo_file_name": "pict_4.jpg",
+        "phone_number": "677098756",
+        "title": "Grande Campagne d'Evangelisaton",
+        "event_type": "Evangelisation",
+        "date_time": "Thu, 15 Jun 2023 15:01:00.000000000 UTC +00:00",
+        "description": "Grande Campagne d'Evangélisation en plein air. Avec des évangélistes renommé. Au programme, prédication, guérisons, délivrances.",
+        "participant_count": 1000,
+        "address": "Douala, Stade Mbappe",
+        "directions": "Face Eglise Catholique d'Akwa, Douala, Cameroun",
+        "organizer": "Unknown"
+    },
+    {
+        "photo_file_name": "pict_5.jpg",
+        "phone_number": "680638242",
+        "title": "Concert évangélique gospel avec predication",
+        "event_type": "Musical",
+        "date_time": "Sat, 20 May 2023 14:56:00.000000000 UTC +00:00",
+        "description": "concert inédit pour la gloire du Seigneur. Suivi de témoignage et de la prédication de l'Evangile.",
+        "participant_count": 50,
+        "address": "Salle Douala Bercy",
+        "directions": "Yaounde, Châpiteau d'Akwa",
+        "organizer": "Unknown"
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "email": "patlonla@yahoo.com",
+        "password": "patrice",
+        "password_confirmation": "patrice"
+    }, 
+    {
+        "email": "splonla@gmail.com",
+        "password": "serge1",
+        "password_confirmation": "serge1"
+    },
+    {
+        "email": "lonla01@internet.lu",
+        "password": "serge2",
+        "password_confirmation": "serge2"
+    },
+    {
+        "email": "joelle.tiabou.3@gmail.com",
+        "password": "logpom1",
+        "password_confirmation": "logpom1"
+    },
+    {
+        "email": "annick.tsangeu.4@gmail.com",
+        "password": "logpom2",
+        "password_confirmation": "logpom2"
+    }
+]
