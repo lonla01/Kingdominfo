@@ -1,13 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
 <div id="events">
 
-<table class="table">
+  <table class="table" style="color: white;">
 
     <thead class="thead-dark">
       <tr>
         <th scope="col" class="w-25">Date</th>
-        <th scope="col">Event</th>
+        <th scope="col" class="w-50">Event</th>
         <th scope="col" class="w-25">Registration</th>
         <th scope="col" class="w-25">Organizer</th>
       </tr>
@@ -24,4 +22,6 @@
   </table>
 </div>
 
-<%= link_to "New event", new_event_path %>
+<div class="container">
+  <%= link_to "New event", new_event_path, class:"btn btn-secondary" %>
+</div>

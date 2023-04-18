@@ -14,7 +14,8 @@
         </li>
 
         <li class="nav-item">
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+        <!-- :method => :delete is replaced by data: { "turbo-method": :delete } due to a bug in devise's javascript interface in Rails 7 -->
+        <%= link_to "Sign out", destroy_user_session_path, data: { "turbo-method": :delete }, class:"nav-link" %>
         </li>
 
         <li class="nav-item">
@@ -35,10 +36,12 @@
       
     </ul>
 
+    <!-- This commented out section displays a search field with search button. But they align badly in the navbar
     <form class="form-inline mr-auto">
       <input class="form-control" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2" type="submit">Search</button>
     </form>
+    -->
     
   </div>
 </nav>
