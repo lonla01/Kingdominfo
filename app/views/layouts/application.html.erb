@@ -21,16 +21,14 @@
   <body>
 
      <header>
-	    <div class="overlay">
-        <h5><%= link_to 'Kingdom-news', root_path, class:"navbar-brand" %></h5>
-      
+	    <div class="overlay">      
        <%= render 'home/navbar' %>
     
     </header>
 
     <br/>
 
-    <div class="container" style="height: 600px;">
+    <div class="container kn-main">
       <% if notice %>
         <%= render 'layouts/alerts' %>
       <% end %>

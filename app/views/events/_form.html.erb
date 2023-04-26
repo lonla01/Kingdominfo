@@ -17,11 +17,6 @@
   </div>
 
   <div class="col-md-4">
-    <%= form.label :organizer, style: "display: block" %>
-    <%= form.text_field :organizer, class:"form-control" %>
-  </div>
-
-  <div class="col-md-4">
     <%= form.label :phone_number, style: "display: block" %>
     <%= form.text_field :phone_number, class:"form-control" %>
   </div>
@@ -64,6 +59,11 @@
   <div class="form-group">
     <%= form.label :directions, style: "display: block" %>
     <%= form.text_field :directions, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    
+    <%= form.number_field :organizer_id, id: :event_organizer_id, class:"form-control", value: current_user.id, type: :hidden %>
   </div>
 
   <br/>

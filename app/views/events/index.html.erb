@@ -1,3 +1,5 @@
+
+<% if user_signed_in? %>
 <div id="events">
 
   <table class="table" style="color: white;">
@@ -25,3 +27,9 @@
 <div class="container">
   <%= link_to "New event", new_event_path, class:"btn btn-secondary" %>
 </div>
+<% else %>
+
+  <h1>Not yet logged in!</h1>
+  <p>Please log in to see the events...</p>
+
+<% end %>
