@@ -74,3 +74,5 @@ group :test do
 end
 
 gem "dartsass-rails", "~> 0.4.1"
+
+gem "cssbundling-rails", "~> 1.1"

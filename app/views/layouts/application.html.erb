@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "custom", "navbar", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "bootstrap.min.css", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
@@ -14,23 +14,43 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
   </head>
 
   <body>
 
-    <%= render 'home/header' %>
+     <header>
+	    <div class="overlay">
+        <h5><%= link_to 'Kingdom-news', root_path, class:"navbar-brand" %></h5>
+      
+       <%= render 'home/navbar' %>
+    
+    </header>
+
     <br/>
-    <div class="container">
+
+    <div class="container" style="height: 600px;">
       <% if notice %>
         <%= render 'layouts/alerts' %>
       <% end %>
 
       <%= yield %>
     </div>
+
     <br/>
+
+    <footer>
+	    <div class="overlay">
+        <%= render 'home/footer' %>
+		</div>
+    </footer>
+
+    <!--
     <footer>
       <%= render 'home/footer' %>
     </footer>
+    -->
+
   </body>
 </html>
