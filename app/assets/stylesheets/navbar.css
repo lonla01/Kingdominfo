@@ -19,18 +19,19 @@ body {
     position: fixed;
     line-height: 65px;
     text-align: center;
+    margin-top: 1px
 }
 
 .nav div.logo {
     float: left;
-    width: 200px;
-    height: 200px;
-    padding-left: 3rem;
+    width: 150px;
+    height: 120px;
+    padding: 0px;
 }
 
 .nav div.logo a {
     text-decoration: none;
-    color: #fff;
+    color: #a94a4a;
     font-size: 2.5rem;
 }
 
@@ -61,13 +62,13 @@ body {
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #66B0D7;
     line-height: 65px;
     font-size: 2.4rem;
 }
 
 .nav div.main_list ul li a:hover {
-    color: #00E676;
+    color: #E65890;
 }
 
 
@@ -75,7 +76,7 @@ body {
 
 .home {
     width: 100%;
-    height: 10vh;
+    height: 25vh;
     background-position: center top;
 	background-size:cover;
 }
@@ -105,7 +106,7 @@ body {
         display: block;
     }
     .nav div.logo {
-        margin-left: 15px;
+        margin-left: 10px;
     }
     .nav div.main_list {
         width: 100%;

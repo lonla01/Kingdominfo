@@ -23,7 +23,7 @@ class EventsTest < ApplicationSystemTestCase
     fill_in "Phone number", with: @event.phone_number
     fill_in "Photo file name", with: @event.photo_file_name
     fill_in "Title", with: @event.title
-    fill_in "Type", with: @event.type
+    fill_in "Event Type", with: @event.event_type
     click_on "Create Event"
 
     assert_text "Event was successfully created"
@@ -43,7 +43,7 @@ class EventsTest < ApplicationSystemTestCase
     fill_in "Phone number", with: @event.phone_number
     fill_in "Photo file name", with: @event.photo_file_name
     fill_in "Title", with: @event.title
-    fill_in "Type", with: @event.type
+    fill_in "Event Type", with: @event.event_type
     click_on "Update Event"
 
     assert_text "Event was successfully updated"

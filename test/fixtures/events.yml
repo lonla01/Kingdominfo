@@ -5,7 +5,7 @@ one:
   organizer: MyString
   phone_number: MyString
   title: MyString
-  type: 
+  event_type: MyString
   date_time: 2023-04-12 15:55:09
   description: MyString
   participant_count: 1
@@ -17,7 +17,7 @@ two:
   organizer: MyString
   phone_number: MyString
   title: MyString
-  type: 
+  event_type: MyString
   date_time: 2023-04-12 15:55:09
   description: MyString
   participant_count: 1
