@@ -9,4 +9,8 @@ class Event < ApplicationRecord
         date_time.strftime("%H:%M") unless date_time.nil?
     end
 
+    def event_organizer
+        organizer.pseudo
+    end
+
 end

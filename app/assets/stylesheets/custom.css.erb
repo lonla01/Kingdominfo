@@ -1,20 +1,23 @@
-*{padding: 0; margin: 0; box-sizing: border-box;}
+*{padding: 0; margin: 0px; box-sizing: border-box;}
 body{height: 900px;}
 header {
 	padding: 0px;
 	color: #FFF;
+  height: 20vh;
+  min-height: 300px;
 	text-shadow: 1px 1px 1px #333;
-    color: white;
-    background-image: url(<%= asset_path 'kn-header' %>) !important;
-    background-repeat: no-repeat;
-    background-size: cover; 
+  color: white;
+  background-image: url(<%= asset_path 'kn-header' %>) !important;
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
 
 footer {
-	background: url(<%= asset_path "kn-footer1" %>);
+	background-image: url(<%= asset_path "kn-footer1" %>);
 	text-align: center;
 	width: 100%;
 	height: 20vh;
+  min-height: 300px;
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
@@ -109,23 +112,44 @@ h1 {
 	margin-bottom: 30px;
 }
 
-h3, p {
-	font-family: 'Open Sans', sans-serif;
-	margin-bottom: 30px;
+#kn-subtitle {
+	font-family: 'Open Sans';
+  font-size: 20px;
+  font-weight: bold;
+	margin-bottom: 20px;
+  color: #D43D65
 }
 
-button {
-	border: none;
-	outline: none;
-	padding: 10px 20px;
-	border-radius: 50px;
-	color: #333;
-	background: #fff;
-	margin-bottom: 50px;
-	box-shadow: 0 3px 20px 0 #0000003b;
+#kn-label {
+	font-family: 'Dancing Script';
+  font-weight: bold;
+  font-size: 18px;
+	margin-bottom: 5px;
 }
-button:hover{
+
+
+#kn-button {
+  background-color: #66B0D7; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #D276A3 , #D43D65);
+  padding: 10px 20px;
+  margin: 20px 20px;
+  border-radius: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+#kn-button:hover{
 	cursor: pointer;
+}
+
+#kn-value {
+  font-family: 'Dancing Script';
+  font-size: 16px;
+  padding: 2px 2px;
+  margin: 2px 2px;
+  color: black;
+  font-weight: bold;
+  text-align: left;
 }
 
 .custom_border {
@@ -137,12 +161,12 @@ button:hover{
 }
 
 .kn-main {
-    padding: 10px;
-    color: #e20e65;
-	height: 700px;
+  padding: 10px;
+  color: #3649D2;
+	height: 800px;
 	font-size: 16px;
 }
 
 div {
-    padding: 10px;
+  padding: 10px;
 }

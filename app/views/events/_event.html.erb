@@ -8,7 +8,7 @@
           <%= event.date_time.strftime("%a %d %b %H:%M") unless event.date_time.nil? %> 
         </th>
         <td class="w-50"> <%= event.title %> </td>
-        <td class="w-25"> <%= event.participant_count %> </td>
+        <td class="w-25"> <%= "#{event.bookings} / #{event.participant_count}" %> </td>
         <td class="w-25"> <%= event.organizer.pseudo %></td>
       </tr>
     </tbody>

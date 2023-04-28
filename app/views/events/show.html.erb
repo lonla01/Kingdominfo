@@ -1,10 +1,23 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @event %>
 
-<div>
-  <%= link_to "Edit this event", edit_event_path(@event) %> |
-  <%= link_to "Back to events", events_path %>
+<%= render 'event_details', :event => @event %>
 
-  <%= button_to "Destroy this event", @event, method: :delete %>
-</div>
+<nav class="nav" style="position: relative">
+  <div class="main_list">
+    <ul>
+        <li>
+          <%= link_to "Modify this event", edit_event_path(@event), id: "kn-button" %>
+        </li>
+
+        <li>
+          <%= link_to "List of events", events_path, id: "kn-button" %>
+        </li>
+
+        <li>
+          <%= link_to "Cancel this event", @event, method: :delete, id: "kn-button" %>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+

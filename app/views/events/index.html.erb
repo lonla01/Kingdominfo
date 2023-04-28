@@ -2,7 +2,7 @@
 <% if user_signed_in? %>
 <div id="events">
 
-  <table class="table" style="color: white;">
+  <table class="table" style="color: #E65890;">
 
     <thead class="thead-dark">
       <tr>
@@ -25,7 +25,7 @@
 </div>
 
 <div class="container">
-  <%= link_to "New event", new_event_path, class:"btn btn-secondary" %>
+  <%= link_to "New event", new_event_path, class:"btn btn-secondary", id:"kn-button" %>
 </div>
 <% else %>
 
