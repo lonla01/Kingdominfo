@@ -1,29 +1,41 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+<div class="container">
+	<!-- code here -->
+	<div class="card">
+		<div class="card-image">	
+			<h2 class="card-heading">
+				Get started
+				<small>Let us create your account</small>
+			</h2>
+		</div>
+		<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "new_user card-form"}) do |f| %>
+			<%= render "devise/shared/error_messages", resource: resource %>
+            <div class="input">
+				<input type="text" class="input-field" value="Alexander Parkinson" required/>
+				<label class="input-label">Full Name</label>
+			</div>
+			<div class="input">
+				<%= f.email_field :email, class: "input-field", autofocus: true, value: "your@email.com", required: true %>
+				<label class="input-label">Email</label>
+			</div>
+			<div class="input">
+				<%= f.password_field :password, class: "input-field", autofocus: true, value: "password", required: true %>
+                <% if @minimum_password_length %>
+                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+				<label class="input-label">Password</label>
+			</div>
+			<div class="input">
+				<%= f.password_field :password_confirmation, class: "input-field", autofocus: true, value: "password confirmation", required: true %>
+				<label class="input-label">Password Confirmation</label>
+			</div>
+			<div>
+				<%= f.button 'Get Started', name: 'commit', value: 'save', id: "action-button" %>
+			</div>
+		<% end %>
+		<div class="card-info">
+			<p>By signing up you are agreeing to our <a href="#">Terms and Conditions</a></p>
+		</div>
+	</div>
+</div>
 
 <%= render "devise/shared/links" %>

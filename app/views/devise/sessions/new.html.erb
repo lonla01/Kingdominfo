@@ -3,15 +3,13 @@
 	<div class="card">
 		<div class="card-image">	
 			<h2 class="card-heading">
-				Get started
-				<small>Let us create your account</small>
+				Welcome back !
+				<small>Log in to see event current events</small>
 			</h2>
 		</div>
 		<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "new_user card-form"}) do |f| %>
-			<div class="input">
-				<input type="text" class="input-field" value="Alexander Parkinson" required/>
-				<label class="input-label">Full Name</label>
-			</div>
+			<%= render "devise/shared/error_messages", resource: resource %>
+			
 			<div class="input">
 				<%= f.email_field :email, class: "input-field", autofocus: true, value: "your@email.com", required: true %>
 				<label class="input-label">Email</label>
@@ -20,12 +18,9 @@
 				<%= f.password_field :password, class: "input-field", autofocus: true, value: "password", required: true %>
 				<label class="input-label">Password</label>
 			</div>
-			<div class="input">
-				<%= f.password_field :password_confirmation, class: "input-field", autofocus: true, value: "password confirmation", required: true %>
-				<label class="input-label">Password Confirmation</label>
-			</div>
+			
 			<div>
-				<%= f.button name: 'commit', value: 'save', class: "action-button" %>
+				<%= f.button "Log in", name: 'commit', value: 'save', id: "action-button" %>
 			</div>
 		<% end %>
 		<div class="card-info">
@@ -34,3 +29,4 @@
 	</div>
 </div>
 
+<%= render "devise/shared/links" %>
