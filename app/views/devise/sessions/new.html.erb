@@ -7,23 +7,27 @@
 				<small>Let us create your account</small>
 			</h2>
 		</div>
-		<form class="card-form">
+		<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "new_user card-form"}) do |f| %>
 			<div class="input">
 				<input type="text" class="input-field" value="Alexander Parkinson" required/>
 				<label class="input-label">Full Name</label>
 			</div>
 			<div class="input">
-				<input type="text" class="input-field" value="vlockn@gmail.com" required/>
+				<%= f.email_field :email, class: "input-field", autofocus: true, value: "your@email.com", required: true %>
 				<label class="input-label">Email</label>
 			</div>
 			<div class="input">
-				<input type="password" class="input-field" required/>
+				<%= f.password_field :password, class: "input-field", autofocus: true, value: "password", required: true %>
 				<label class="input-label">Password</label>
 			</div>
-			<div class="action">
-				<button class="action-button">Get started</button>
+			<div class="input">
+				<%= f.password_field :password_confirmation, class: "input-field", autofocus: true, value: "password confirmation", required: true %>
+				<label class="input-label">Password Confirmation</label>
 			</div>
-		</form>
+			<div>
+				<%= f.button name: 'commit', value: 'save', class: "action-button" %>
+			</div>
+		<% end %>
 		<div class="card-info">
 			<p>By signing up you are agreeing to our <a href="#">Terms and Conditions</a></p>
 		</div>
