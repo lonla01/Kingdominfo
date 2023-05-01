@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_27_171520) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_01_022401) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "event_id"
+    t.index ["event_id"], name: "index_bookings_on_event_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "photo_file_name"
@@ -27,8 +36,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_27_171520) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "organizer_id"
-    t.integer "bookings", default: 0
+    t.integer "registration_id"
     t.index ["organizer_id"], name: "index_events_on_organizer_id"
+    t.index ["registration_id"], name: "index_events_on_registration_id"
+  end
+
+  create_table "registrations", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "organizer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_registrations_on_event_id"
+    t.index ["organizer_id"], name: "index_registrations_on_organizer_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,7 +59,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_27_171520) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "pseudo"
+    t.integer "registration_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["registration_id"], name: "index_users_on_registration_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

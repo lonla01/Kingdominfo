@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[ show edit update destroy ]
+  before_action :set_event, only: %i[ show edit update destroy register]
 
   # GET /events or /events.json
   def index
@@ -19,6 +19,21 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
+  end
+
+
+  # GET /events/register/1
+  def register
+    @id = current_user.id
+    if @event.users.include? current_user
+      # You have already booked this event
+      redirect_to event_url(@event), notice: "You have already booked this event."
+    else 
+      @event.bookings.build(user_id: @id)
+      @event.save
+      redirect_to event_url(@event), notice: "You have sucessfully booked this event."
+    end
+    
   end
 
   # POST /events or /events.json

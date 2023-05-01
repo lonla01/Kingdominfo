@@ -2,26 +2,25 @@
 <% if user_signed_in? %>
 <div id="events">
 
-  <table class="table" style="color: #E65890;">
+  <div class="container">
 
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col" class="w-25">Date</th>
-        <th scope="col" class="w-50">Event</th>
-        <th scope="col" class="w-25">Registration</th>
-        <th scope="col" class="w-25">Organizer</th>
-      </tr>
-    </thead>
+    <div class="row table_header">
+        <div class="col-sm-2"> Date  </div>
+        <div class="col-sm-6"> Event </div>
+        <div class="col-sm-2"> Registration </div>
+        <div class="col-sm-2"> Organizer </div>
+    </div>
 
-  <% @events.each do |event| %>
-    
-    <%= link_to event do %>
-      <%= render event %>
+    <% @events.each do |event| %>
+
+      <%= link_to event do %>
+        <%= render event %>
+      <% end %>
+
     <% end %>
 
-  <% end %>
+  </div>
 
-  </table>
 </div>
 
 <div class="container">
