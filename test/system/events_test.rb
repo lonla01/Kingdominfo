@@ -3,6 +3,7 @@ require "application_system_test_case"
 class EventsTest < ApplicationSystemTestCase
   setup do
     @event = events(:one)
+    ActiveRecord::Base.connection.reset_pk_sequence!('events')
   end
 
   test "visiting the index" do

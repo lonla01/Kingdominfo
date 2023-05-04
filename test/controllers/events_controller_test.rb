@@ -2,7 +2,10 @@ require "test_helper"
 
 class EventsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    @user = users(:one)
     @event = events(:one)
+    @event.organizer = @user
+    ActiveRecord::Base.connection.reset_pk_sequence!('events')
   end
 
   test "should get index" do
