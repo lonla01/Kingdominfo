@@ -46,16 +46,8 @@ class Event < ApplicationRecord
         organizer.pseudo
     end
 
-<<<<<<< HEAD
-    def register_to
-        registration = Registration.new
-        registration.event = self
-        registration.organizer = current_user
-        registration.save
-=======
     def booking_count
         bookings.count
->>>>>>> origin/main
     end
 
 end
