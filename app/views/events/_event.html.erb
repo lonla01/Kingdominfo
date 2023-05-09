@@ -1,20 +1,24 @@
+
 <div id="<%= dom_id event %>">
-  
-  <table class="table">
 
-    <tbody>
-      <tr>
-        <th scope="row" class="w-25"> 
-          <%= event.date_time.strftime("%a %d %b %H:%M") unless event.date_time.nil? %> 
-        </th>
-        <td class="w-50"> <%= event.title %> </td>
-        <td class="w-25"> <%= "#{event.bookings} / #{event.participant_count}" %> </td>
-        <td class="w-25"> <%= event.organizer.pseudo %></td>
-      </tr>
-    </tbody>
+    <div class="row">
+     
+        <div class="col-sm-2">
+            <%= event.date_time.strftime("%a %d %b %H:%M") unless event.date_time.nil? %>
+        </div>
 
-  </table>
+        <div class="col-sm-6">
+            <%= event.title %>
+        </div>
+
+        <div class="col-sm-2">
+            <%= "#{event.bookings} / #{event.participant_count}" %>
+        </div>
+
+        <div class="col-sm-2">
+            <%= event.organizer.pseudo %>
+        </div>
+
+    </div>
 
 </div>
-
-
