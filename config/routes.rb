@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "events#index"
+
+  # When a user register to participate to an event
+  get 'events/register/:id' => 'events#register', :as => :register_to_event
 end

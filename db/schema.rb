@@ -17,6 +17,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_112025) do
   create_table "bookings", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "event_id"
+    t.index ["event_id"], name: "index_bookings_on_event_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -32,7 +36,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_112025) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "organizer_id"
-    t.integer "bookings", default: 0
     t.integer "registration_id"
     t.index ["organizer_id"], name: "index_events_on_organizer_id"
     t.index ["registration_id"], name: "index_events_on_registration_id"
@@ -57,7 +60,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_112025) do
     t.datetime "updated_at", null: false
     t.string "pseudo"
     t.integer "registration_id"
-    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["registration_id"], name: "index_users_on_registration_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

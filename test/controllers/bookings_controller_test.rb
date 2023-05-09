@@ -3,6 +3,7 @@ require "test_helper"
 class BookingsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @booking = bookings(:one)
+    ActiveRecord::Base.connection.reset_pk_sequence!('bookings')
   end
 
   test "should get index" do
@@ -34,7 +35,11 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update booking" do
+<<<<<<< HEAD
     patch booking_url(@booking), params: { booking: {  } }
+=======
+    patch booking_url(@booking), params: { booking: { user_id: 1, event_id: 1 } }
+>>>>>>> origin/main
     assert_redirected_to booking_url(@booking)
   end
 

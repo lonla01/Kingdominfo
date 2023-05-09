@@ -75,4 +75,5 @@ end
 
 Event.delete_all
 User.delete_all
-Seed.seed_initial_events
+Rake.application["db:fixtures:load"].invoke
+#Seed.seed_initial_events
