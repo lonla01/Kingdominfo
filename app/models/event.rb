@@ -9,7 +9,6 @@ class Event < ApplicationRecord
     end
 
     def date=(d_)
-        
         d = d_.to_date
         if date_time.nil?
             t = Time.new
@@ -17,7 +16,7 @@ class Event < ApplicationRecord
             t = date_time.to_time
         end
         p "Setting date d=#{d}, t=#{t}"
-        change_date_time(d, t)
+        set_date_and_time(d, t)
     end
 
     def time
@@ -31,17 +30,16 @@ class Event < ApplicationRecord
         else
             d = date_time.to_date
         end
-        change_date_time(d, t)
+        set_date_and_time(d, t)
     end
 
-    def change_date_time(d, t)
-        date_time = DateTime.new(d.year, d.month, d.day, t.hour, t.min, t.sec)
-        if save
-            p "Sucessfully changed date_time"
+    def set_date_and_time(d, t)
+        if t.nil?
+           t = Time.new
         end
+        self.date_time = DateTime.new(d.year, d.month, d.day, t.hour, t.min, t.sec)
     end
-
-
+ 
     def event_organizer
         organizer.pseudo
     end
