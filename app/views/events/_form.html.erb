@@ -13,7 +13,9 @@
 
   <div class="col-md-4">
     <%= form.label :pict_file_name, style: "display: block" %>
-    <p> Current picture file: <%= "#{event.pict_file_name.blob.filename}" %> </p>
+    <% if !event.pict_file_name.blob.nil? %>
+      <p> Current picture file: <%= "#{event.pict_file_name.blob.filename}" %> </p>
+    <% end %>
     <%= form.file_field :pict_file_name, class:"form-control col-md-4" %>
   </div>
 
