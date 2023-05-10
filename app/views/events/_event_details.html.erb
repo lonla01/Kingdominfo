@@ -14,8 +14,7 @@
   <% end %>
 
   <div class="col-md-4">
-    <span id="kn-label"><%= form.label :photo_file_name %>:</span>
-    <span id="kn-value"><%= event.photo_file_name %></span>
+    <%= render 'attachment', :event => @event %>
   </div>
 
   <div class="col-md-4">

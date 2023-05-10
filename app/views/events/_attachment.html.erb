@@ -1,0 +1,9 @@
+<% if event.pict_file_name.attached? %>
+      <div class="row">
+        <% if event.pict_file_name.image? %>
+            <div class="message-image-container">
+                <%= image_tag event.pict_file_name, class:"message-image"%>
+            </div>
+        <% end %>
+      </div>
+<% end %>

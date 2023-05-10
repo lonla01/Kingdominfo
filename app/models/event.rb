@@ -3,6 +3,7 @@ class Event < ApplicationRecord
     has_many :event_registrations, class_name: "Registration"
     has_many :bookings
     has_many :users, through: :bookings
+    has_one_attached :pict_file_name, dependent: :destroy
 
     def date
         date_time.strftime("%a %d %b") unless date_time.nil?
