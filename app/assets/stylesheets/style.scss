@@ -42,31 +42,31 @@ body {
 }
 
 .layout_margin {
-  margin: 90px 0;
+  margin: 25px 0;
 }
 
 .layout_padding {
-  padding: 90px 0;
+  padding: 25px 0;
 }
 
 .layout_padding2 {
-  padding: 45px 0;
+  padding: 25px 0;
 }
 
 .layout_padding2-top {
-  padding-top: 45px;
+  padding-top: 25px;
 }
 
 .layout_padding2-bottom {
-  padding-bottom: 45px;
+  padding-bottom: 25px;
 }
 
 .layout_padding-top {
-  padding-top: 90px;
+  padding-top: 25px;
 }
 
 .layout_padding-bottom {
-  padding-bottom: 90px;
+  padding-bottom: 25px;
 }
 
 .heading_container {
@@ -409,7 +409,7 @@ a:focus {
   .box {
     background-color: #fcfcfd;
     padding: 15px;
-    margin: 45px 0;
+    margin: 25px 0;
 
     .head-box {
       display: flex;
@@ -471,7 +471,7 @@ a:focus {
   .box {
     background-color: #333456;
     padding: 15px;
-    margin: 45px 0;
+    margin: 25px 0;
     color: $white;
 
     .head-box {
@@ -679,7 +679,7 @@ a:focus {
   background-color: $btnColor;
   color: #fff;
   font-size: 15px;
-  padding: 15px 45px;
+  padding: 15px 25px;
   border-radius: 30px;
   text-transform: uppercase;
   font-weight: bold;
