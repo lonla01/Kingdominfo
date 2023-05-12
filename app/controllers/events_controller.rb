@@ -12,7 +12,10 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    p "In event_controller#new, current_user is #{current_user}"
+    p "In EvenController#new"
+    if !user_signed_in?
+      format.html { redirect_to new_user_session_path, notice: "You need to log in before creating a new event!" }
+    end
     @event = Event.new
     @event.organizer = current_user unless current_user.nil?
   end
@@ -21,26 +24,30 @@ class EventsController < ApplicationController
   def edit
   end
 
-
   # GET /events/register/1
   def register
-    @id = current_user.id
-    if @event.users.include? current_user
-      # You have already booked this event
-      redirect_to event_url(@event), notice: "You have already booked this event."
-    else 
-      @event.bookings.build(user_id: @id)
-      @event.save
-      redirect_to event_url(@event), notice: "You have sucessfully booked this event."
+
+    if user_signed_in?
+      @id = current_user.id
+      if @event.users.include? current_user
+        # You have already booked this event
+        redirect_to event_url(@event), notice: "You have already booked this event."
+      else 
+        @event.bookings.build(user_id: @id)
+        @event.save
+        redirect_to event_url(@event), notice: "You have sucessfully booked this event."
+      end
+    else
+      redirect_to new_user_session_path, notice: "You need to log in in order to register for this event."
     end
-    
   end
 
   # POST /events or /events.json
   def create
-    p "In event_controller#create, current_user is #{current_user}"
+    if !user_signed_in?
+      format.html { redirect_to new_user_session_path, notice: "You need to log in before creating a new event!" }
+    end
     @event = Event.new(event_params)
-
     @event.organizer = current_user unless current_user.nil?
     respond_to do |format|
       if @event.save

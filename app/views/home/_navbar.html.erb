@@ -7,29 +7,36 @@
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
+                
+                <li class="nav-item">
                     <% if user_signed_in? %>
-                        <li class="nav-item">
                         <%= link_to "Create event", new_event_path, class:"nav-link" %>
-                        </li>
+                    <% else %>
+                        <% flash.alert = "You need to log in bafore publiching an event!" %>
+                        <%= link_to "Create event", new_user_session_path, class:"nav-link" %>
+                    <% end %>
+                </li>
 
-                        <li class="nav-item">
+                <% if user_signed_in? %>
+                    <li class="nav-item">
                         <!-- :method => :delete is replaced by data: { "turbo-method": :delete } due to a bug in devise's javascript interface in Rails 7 -->
                         <%= link_to "Sign out", destroy_user_session_path, data: { "turbo-method": :delete }, class:"nav-link" %>
-                        </li>
+                    </li>
 
-                        <li class="nav-item">
+                    <li class="nav-item">
                         <%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link" %>
-                        </li>
+                    </li>
 
-                    <% else %>
-                        <li class="nav-item">
+                <% else %>
+                    <li class="nav-item">
                         <%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
-                        </li>
+                    </li>
 
-                        <li class="nav-item">
+                    <li class="nav-item">
                         <%= link_to "Sign In", new_user_session_path, class:"nav-link" %>
-                        </li>
-                    <% end %>
+                    </li>
+                <% end %>
+
                 </ul>
             </div>
             <span class="navTrigger">

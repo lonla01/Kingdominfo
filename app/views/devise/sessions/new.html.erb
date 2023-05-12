@@ -1,5 +1,8 @@
 <div class="container">
-	<!-- code here -->
+	<% if notice %>
+		<strong> notice </strong>
+		<%= render 'layouts/alerts' %>
+	<% end %>			
 	<div class="card">
 		<div class="card-image">	
 			<h2 class="card-heading">

@@ -1,6 +1,9 @@
 
 
-<%= render "form", event: @event %>
-
-<br>
-
+<% if user_signed_in? %>
+    <%= render "form", event: @event %>
+    <br>
+<% else %>
+    <%= render "login", event: @event %>
+    <br>
+<% end %>
