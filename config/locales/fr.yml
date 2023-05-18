@@ -7,3 +7,6 @@ fr:
     navbar:
       create_event: "Créer un événement"
       event_list: "Voir les événements"
+      sign-in: "S'identifier"
+      sign-up: "S'enregistrer"
+      sign-out: "Se déconnecter"

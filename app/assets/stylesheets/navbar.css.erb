@@ -6,7 +6,6 @@ body {
     box-sizing: border-box;
     font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
-    font-size: 10px;
 }
 /*-- Inspiration taken from abdo steif -->
 /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
@@ -57,14 +56,26 @@ body {
     width: auto;
     height: 65px;
     padding: 0;
-    padding-right: 3rem;
+    padding-right: 1.5rem;
 }
 
-.nav div.main_list ul li a {
+.nav div.main_list a {
+    text-align: center;
+    width: 30px;
     text-decoration: none;
     color: #66B0D7;
     line-height: 65px;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+    padding: 5px;
+}
+.nav div.main_list ul li a {
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: #66B0D7;
+    line-height: 65px;
+    font-size: 1.8rem;
+    padding: 5px;
 }
 
 .nav div.main_list ul li a:hover {
@@ -132,15 +143,10 @@ body {
         width: 100%;
         text-align: right;
     }
-    .nav div.main_list ul li a {
-        text-align: center;
-        width: 100%;
-        font-size: 3rem;
-        padding: 20px;
-    }
     .nav div.media_button {
         display: block;
     }
+
 }
 
 

@@ -1,35 +1,26 @@
-<div class="container">
-	<% if notice %>
-		<strong> notice </strong>
-		<%= render 'layouts/alerts' %>
-	<% end %>			
-	<div class="card">
-		<div class="card-image">	
-			<h2 class="card-heading">
-				<%= t("welcome_back") %>
-				<small>Log in to register for events</small>
-			</h2>
-		</div>
-		<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "new_user card-form"}) do |f| %>
-			<%= render "devise/shared/error_messages", resource: resource %>
-			
-			<div class="input">
-				<%= f.email_field :email, class: "input-field", autofocus: true, value: "your@email.com", required: true %>
-				<label class="input-label">Email</label>
-			</div>
-			<div class="input">
-				<%= f.password_field :password, class: "input-field", autofocus: true, value: "password", required: true %>
-				<label class="input-label">Password</label>
-			</div>
-			
-			<div>
-				<%= f.button "Log in", name: 'commit', value: 'save', id: "action-button" %>
-			</div>
-		<% end %>
-		<div class="card-info">
-			<p>By signing up you are agreeing to our <a href="#">Terms and Conditions</a></p>
-		</div>
-	</div>
-</div>
+<h2><%= t('.sign_in') %></h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit t('.sign_in') %>
+  </div>
+<% end %>
 
 <%= render "devise/shared/links" %>

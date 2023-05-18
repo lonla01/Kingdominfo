@@ -38,3 +38,6 @@ en:
     navbar:
       create_event: "Create Event"
       event_list: "Event list"
+      sign-in: "Sign in"
+      sign-up: "Sign up"
+      sign-out: "Sign out"
