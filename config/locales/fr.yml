@@ -1,3 +1,9 @@
-en:
+fr:
   hello: "Bonjour monde"
   find_me_in: "Trouvez moi ici"
+  welcome_back: "Bienvenue !"
+  create_event: "Créer un événement"
+  home:
+    navbar:
+      create_event: "Créer un événement"
+      event_list: "Voir les événements"

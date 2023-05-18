@@ -6,8 +6,8 @@
 	<div class="card">
 		<div class="card-image">	
 			<h2 class="card-heading">
-				Welcome back !
-				<small>Log in to see current events</small>
+				<%= t("welcome_back") %>
+				<small>Log in to register for events</small>
 			</h2>
 		</div>
 		<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "new_user card-form"}) do |f| %>

@@ -32,3 +32,9 @@
 en:
   hello: "Hello world"
   find_me_in: "Find me in"
+  welcome_back: "Welcome back!"
+  create_event: "Create Event"
+  home:
+    navbar:
+      create_event: "Create Event"
+      event_list: "Event list"
