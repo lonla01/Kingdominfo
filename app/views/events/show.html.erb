@@ -6,19 +6,19 @@
   <div class="main_list">
     <ul>
         <li>
-          <%= link_to "Modify this event", edit_event_path(@event), id: "kn-button" %>
+          <%= link_to t('.modify_event'), edit_event_path(@event), id: "kn-button" %>
         </li>
 
         <li>
-          <%= link_to "List of events", events_path, id: "kn-button" %>
+          <%= link_to t('.list_of_events'), events_path, id: "kn-button" %>
         </li>
 
         <li>
-          <%= link_to "Register for this event", register_to_event_path(@event), id: "kn-button" %>
+          <%= link_to t('.register_event'), register_to_event_path(@event), id: "kn-button" %>
         </li>
         
         <li>
-          <%= link_to "Cancel this event", @event, method: :delete, id: "kn-button" %>
+          <%= link_to t('.cancel_event'), @event, method: :delete, id: "kn-button" %>
         </li>
 
     </ul>

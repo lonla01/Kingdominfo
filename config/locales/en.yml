@@ -41,3 +41,17 @@ en:
       sign-in: "Sign in"
       sign-up: "Sign up"
       sign-out: "Sign out"
+  events:
+    index:
+      date: "Date"
+      event: "Event"
+      registration: "Registration"
+      organizer: "Organizer"
+      new_event: "New event"
+    show:
+      modify_event: "Modify this event"
+      list_of_events: "List of events"
+      register_event: "Register for this event"
+      cancel_event: "Cancel this event"
+
+

@@ -10,3 +10,15 @@ fr:
       sign-in: "S'identifier"
       sign-up: "S'enregistrer"
       sign-out: "Se déconnecter"
+  events:
+    index:
+      date: "Date"
+      event: "Evénement"
+      registration: "Souscription"
+      organizer: "Organisateur"
+      new_event: "Nouvel évévement"
+    show:
+      modify_event: "Modifier cet événement"
+      list_of_events: "Liste des évévements"
+      register_event: "Souscrire à cet événement"
+      cancel_event: "Annuler cet événement"
