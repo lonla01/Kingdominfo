@@ -3,6 +3,14 @@ fr:
   find_me_in: "Trouvez moi ici"
   welcome_back: "Bienvenue !"
   create_event: "Créer un événement"
+  get_started: "Inscription"
+  let_us_create_your_account: "Veuillez vous inscrire ci-dessous..."
+  full_name: "Entrez votre nom:"
+  email: "Entrez votre email:"
+  password: "Entrez votre mot de passe:"
+  password_confirmation: "Confirmez votre mot de passe:"
+  terms_and_conditions_html: "<p>En vous enregistrant vous acceptez nos <a href='#'>Termes et conditions.</a></p>"
+  log_in_to_register_html: "<small>Identifiez-vous pour souscrire à un événement.</small>"
   home:
     navbar:
       create_event: "Créer un événement"

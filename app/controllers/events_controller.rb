@@ -12,9 +12,10 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    p "In EvenController#new"
     if !user_signed_in?
-      format.html { redirect_to new_user_session_path, notice: "You need to log in before creating a new event!" }
+      respond_to do |format|
+        format.html { redirect_to new_user_session_path, notice: "You need to log in before creating a new event!" }
+      end
     end
     @event = Event.new
     @event.organizer = current_user unless current_user.nil?
@@ -45,7 +46,9 @@ class EventsController < ApplicationController
   # POST /events or /events.json
   def create
     if !user_signed_in?
-      format.html { redirect_to new_user_session_path, notice: "You need to log in before creating a new event!" }
+      respond_to do |format|
+        format.html { redirect_to new_user_session_path, notice: "You need to log in before creating a new event!" }
+      end
     end
     @event = Event.new(event_params)
     @event.organizer = current_user unless current_user.nil?

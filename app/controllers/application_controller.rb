@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
     before_action :set_locale
 
+    def current_url(overwrite={})
+        url_for :only_path => false, :params => params.merge(overwrite)
+    end
+    
     private
 
     def set_locale

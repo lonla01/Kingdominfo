@@ -38,13 +38,13 @@
                         <%= link_to t('home.navbar.sign-in'), new_user_session_path, class:"nav-link" %>
                     </li>
                 <% end %>
-                <li id="flag_fr">
-                    <%= link_to root_path(locale: :fr) do %>
+                <li id="flag_fr"> 
+                    <%= link_to url_for( :only_path => false, :locale => :fr ) do %>
                         <div id="icon_fr"></div>
                     <% end %>
                 </li>
                 <li id="flag_en">
-                    <%= link_to root_path(locale: :en) do %>
+                    <%= link_to url_for( :only_path => false, :locale => :en ) do %>
                         <div id="icon_en"></div>
                     <% end %>
                 </li>
