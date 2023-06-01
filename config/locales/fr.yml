@@ -43,4 +43,4 @@ fr:
         date: "Date"
         time: "Heure"
         phone_number: "Numéro de téléphone"
-        participant_count: "Nombre de participants"
+        participant_count: Nombre de réservations

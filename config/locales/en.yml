@@ -61,12 +61,6 @@ en:
       list_of_events: "List of events"
       register_event: "Register for this event"
       cancel_event: "Cancel this event"
-  activerecord:
-    models:
-      event: Evénement
-    attributes:
-      event: 
-        event_type: "Type d'événement"
-        address: Adresse
+ 
 
 
