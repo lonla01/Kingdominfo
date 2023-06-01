@@ -30,3 +30,17 @@ fr:
       list_of_events: "Liste des évévements"
       register_event: "Souscrire à cet événement"
       cancel_event: "Annuler cet événement"
+  activerecord:
+    models:
+      event: Evénement
+    attributes:
+      event: 
+        event_type: "Type d'événement"
+        description: "Description"
+        address: Adresse
+        directions: "Direction"
+        event_organizer: "Organisateur"
+        date: "Date"
+        time: "Heure"
+        phone_number: "Numéro de téléphone"
+        participant_count: "Nombre de participants"
