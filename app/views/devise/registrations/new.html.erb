@@ -1,7 +1,7 @@
 <div class="container">
 	<!-- code here -->
 	<div class="card">
-		<div class="card-image">	
+		<div class="card-image">
 			<h2 class="card-heading">
 				<%= t('get_started') %>
 				<small><%= t('let_us_create_your_account') %></small>
@@ -9,12 +9,12 @@
 		</div>
 		<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "new_user card-form"}) do |f| %>
 			<%= render "devise/shared/error_messages", resource: resource %>
-            <div class="input">
-				<input type="text" class="input-field" value="Alexander Parkinson" required/>
+      <div class="input">
+			<%= f.text_field :fullname, class: "input-field", autofocus: true, value: t('sample_fullname'), required: true %>
 				<label class="input-label"> <%= t('full_name') %> </label>
 			</div>
 			<div class="input">
-				<%= f.email_field :email, class: "input-field", autofocus: true, value: "your@email.com", required: true %>
+				<%= f.email_field :email, class: "input-field", autofocus: true, value: t('sample_email'), required: true %>
 				<label class="input-label"><%= t('email') %></label>
 			</div>
 			<div class="input">
@@ -28,7 +28,7 @@
 				<%= f.password_field :password_confirmation, class: "input-field", autofocus: true, value: "password confirmation", required: true %>
 				<label class="input-label"> <%= t('password_confirmation') %> </label>
 			</div>
-			<div>
+			<div class="input">
 				<%= f.button t('.sign_up'), name: 'commit', value: 'save', id: "action-button" %>
 			</div>
 		<% end %>

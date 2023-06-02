@@ -9,15 +9,15 @@ header {
   color: white;
   background-image: url(<%= asset_path 'kn-header.jpg' %>) !important;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
 }
 
 footer {
 	background-image: linear-gradient(to right, #D276A3 , #D43D65);
 	text-align: center;
 	width: 100%;
-	height: 40vh;
-  min-height: 20rem;
+	height: 50vh;
+  min-height: 20vh;
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
@@ -27,9 +27,9 @@ footer {
 footer .overlay{
 	width: 100%;
 	height: 100%;
-	padding: 25px;
+	padding: 1em;
 	color: #FFF;
-	text-shadow: 1px 1px 1px #333;	
+	text-shadow: 1px 1px 1px #333;
 }
 
 .table_header {
@@ -110,6 +110,77 @@ footer .overlay{
   text-transform: uppercase;
 }
 
+/* footer section*/
+.footer_section {
+  padding: 10px;
+}
+
+.footer_section p {
+  margin: 0;
+  text-align: center;
+  color: #fefdfc;
+}
+
+.footer_section a {
+  color: #fefdfc;
+}
+/*# sourceMappingURL=style.css.map */
+
+/* layout section */
+.layout_margin {
+  margin: 25px 0;
+}
+
+.layout_padding {
+  padding: 25px 0;
+}
+
+.layout_padding2 {
+  padding: 25px 0;
+}
+
+.layout_padding2-top {
+  padding-top: 25px;
+}
+
+.layout_padding2-bottom {
+  padding-bottom: 25px;
+}
+
+.layout_padding-top {
+  padding-top: 25px;
+}
+
+.layout_padding-bottom {
+  padding-bottom: 25px;
+}
+/* End layout section */
+
+/* Social section */
+.social_container {
+  width: 95%;
+  margin: 0 auto;
+  border-top: 1px solid #898989;
+  padding: 25px 0;
+}
+
+.info_section .social-box {
+  margin: 0 auto;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* End social section */
+
+.info_section .social-box img {
+  width: 35px;
+  margin-right: 5px;
+}
+
 #flag_fr div {
   padding 20px;
   vertical-align: middle;
@@ -129,7 +200,7 @@ footer .overlay{
   vertical-align: middle;
   background-image: url(<%= asset_path 'Flag_of_France.jpg' %>);
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
 }
 
 #icon_en {
@@ -138,7 +209,7 @@ footer .overlay{
   vertical-align: middle;
   background-image: url(<%= asset_path 'Flag_of_USA.jpg' %>);
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
 }
 
 h1 {
@@ -166,8 +237,6 @@ h1 {
 #kn-button {
   background-color: #66B0D7; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, #D276A3 , #D43D65);
-  padding: 10px 20px;
-  margin: 20px 20px;
   border-radius: 20px;
   color: white;
   text-transform: uppercase;
@@ -189,7 +258,7 @@ h1 {
 
 .custom_border {
     border: 4px solid white;
-}   
+}
 
 .form-control {
     display:initial !important;

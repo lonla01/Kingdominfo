@@ -7,6 +7,8 @@ fr:
   let_us_create_your_account: "Veuillez vous inscrire ci-dessous..."
   full_name: "Entrez votre nom:"
   email: "Entrez votre email:"
+  sample_email: "ton_adresse@email.com"
+  sample_fullname: "Jeremy Dubois"
   password: "Entrez votre mot de passe:"
   password_confirmation: "Confirmez votre mot de passe:"
   terms_and_conditions_html: "<p>En vous enregistrant vous acceptez nos <a href='#'>Termes et conditions.</a></p>"
@@ -34,7 +36,7 @@ fr:
     models:
       event: Evénement
     attributes:
-      event: 
+      event:
         event_type: "Type d'événement"
         description: "Description"
         address: Adresse

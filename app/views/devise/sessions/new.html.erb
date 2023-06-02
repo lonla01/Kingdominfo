@@ -1,15 +1,14 @@
-<div class="container">			
+<div class="container">
 	<div class="card">
-		<div class="card-image">	
+		<div class="card-image">
 			<h2 class="card-heading">
 				<%= t("welcome_back") %>
-				
         <%= t('log_in_to_register_html') %>
 			</h2>
 		</div>
 		<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "new_user card-form"}) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-      
+
       <div class="input">
         <%= f.email_field :email, class: "input-field", autofocus: true, value: "your@email.com", required: true %>
         <label class="input-label"> <%= t('email') %> </label>
@@ -18,7 +17,7 @@
         <%= f.password_field :password, class: "input-field", autofocus: true, value: "password", required: true %>
         <label class="input-label"><%= t('password') %></label>
       </div>
-      <div>
+      <div class="input">
         <%= f.button t('.sign_in'), name: 'commit', value: 'save', id: "action-button" %>
       </div>
 		<% end %>

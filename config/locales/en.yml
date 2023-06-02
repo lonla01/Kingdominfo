@@ -38,9 +38,11 @@ en:
   let_us_create_your_account: "Let us create your account..."
   full_name: "Full Name:"
   email: "Email:"
+  sample_email: "your@email.com"
+  sample_fullname: "James Blackey"
   password: "Password:"
   password_confirmation: "Confirm you password:"
-  terms_and_conditions_html: "<p>By signing up you are agreeing to our <a href="#">Terms and Conditions.</a></p>"
+  terms_and_conditions_html: "<p>By signing up you are agreeing to our <a href='#''>Terms and Conditions.</a></p>"
   log_in_to_register_html: "<small>Log in to register for events</small>"
   home:
     navbar:
@@ -61,6 +63,6 @@ en:
       list_of_events: "List of events"
       register_event: "Register for this event"
       cancel_event: "Cancel this event"
- 
+
 
 
