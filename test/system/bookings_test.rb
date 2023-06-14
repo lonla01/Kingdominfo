@@ -3,7 +3,7 @@ require "application_system_test_case"
 class BookingsTest < ApplicationSystemTestCase
   setup do
     @booking = bookings(:one)
-    ActiveRecord::Base.connection.reset_pk_sequence!('bookings')
+    #ActiveRecord::Base.connection.reset_pk_sequence!('bookings')
   end
 
   test "visiting the index" do
