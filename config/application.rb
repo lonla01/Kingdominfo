@@ -20,5 +20,6 @@ module KingdomNews
     # config.eager_load_paths << Rails.root.join("extras")
     config.i18n.available_locales = [:en, :fr]
     config.i18n.default_locale = :en
+    config.action_controller.default_url_options = { host: 'localhost', port: 3000 }
   end
 end

@@ -16,9 +16,9 @@
         <li>
           <%= link_to t('.register_event'), register_to_event_path(@event), id: "kn-button" %>
         </li>
-        
+
         <li>
-          <%= link_to t('.cancel_event'), @event, method: :delete, id: "kn-button" %>
+          <%= button_to t('.cancel_event'), @event, method: :delete, id: "kn-button" %>
         </li>
 
     </ul>

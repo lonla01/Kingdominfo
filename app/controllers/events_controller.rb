@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[ show edit update destroy register]
+  before_action :set_event, only: %i[show edit update destroy register]
+  before_action :authenticate_user!, except: %i[index show]
 
   # GET /events or /events.json
   def index
@@ -33,7 +34,7 @@ class EventsController < ApplicationController
       if @event.users.include? current_user
         # You have already booked this event
         redirect_to event_url(@event), notice: "You have already booked this event."
-      else 
+      else
         @event.bookings.build(user_id: @id)
         @event.save
         redirect_to event_url(@event), notice: "You have sucessfully booked this event."
@@ -65,7 +66,6 @@ class EventsController < ApplicationController
 
   # PATCH/PUT /events/1 or /events/1.json
   def update
-    p "Updating event with params: #{event_params}"
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to event_url(@event), notice: "Event was successfully updated." }

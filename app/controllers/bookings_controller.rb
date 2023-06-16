@@ -21,7 +21,10 @@ class BookingsController < ApplicationController
 
   # POST /bookings or /bookings.json
   def create
-    @booking = Booking.new(booking_params)
+    #@booking = Booking.new(booking_params)
+    @booking = Booking.new
+    @booking.user = User.find(booking_params[:user_id])
+    @booking.event = Event.find(booking_params[:event_id])
 
     respond_to do |format|
       if @booking.save
