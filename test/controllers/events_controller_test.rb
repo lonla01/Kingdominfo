@@ -6,8 +6,8 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     @event = events(:event1)
     @user = @event.organizer
     @event.registration_id = 1
-    @logged_as = users(:patrice)
-    sign_in @logged_as
+    @logged_in_user = users(:patrice)
+    sign_in @logged_in_user
     #ActiveRecord::Base.connection.reset_pk_sequence!('events')
   end
 
@@ -26,7 +26,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "redirects get new if not logged in" do
-    sign_out @logged_as
+    sign_out @logged_in_user
     get new_event_url
     assert_response :redirect
   end
@@ -38,9 +38,10 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create event" do
     assert_difference("Event.count") do
-      post events_url( locale: :fr), params: { event: { address: @event.address, date_time: @event.date_time, description: @event.description, directions: @event.directions, organizer_id: @event.organizer.id, participant_count: @event.participant_count, phone_number: @event.phone_number, photo_file_name: @event.photo_file_name, title: @event.title, type: @event.event_type } }
+      p "Creating Event.count = #{Event.count}"
+      post events_url(locale: :fr), params: { event: { address: @event.address, date_time: @event.date_time, description: @event.description, directions: @event.directions, organizer_id: @event.organizer.id, participant_count: @event.participant_count, phone_number: @event.phone_number, photo_file_name: @event.photo_file_name, title: @event.title, type: @event.event_type } }
     end
-
+    p "Created Event.count = #{Event.count}"
     assert_redirected_to event_url(Event.last, locale: :fr)
   end
 

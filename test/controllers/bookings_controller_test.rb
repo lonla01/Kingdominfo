@@ -2,11 +2,11 @@ require "test_helper"
 
 class BookingsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @annick = users(:annick)
-    @event = events(:event1)
+    @current_user = users(:annick)
+    @current_event = events(:event1)
     @booking = bookings(:one)
-    @logged_as = users(:patrice)
-    sign_in @logged_as
+    @logged_in_user = users(:patrice)
+    sign_in @logged_in_user
     #ActiveRecord::Base.connection.reset_pk_sequence!('bookings')
   end
 
@@ -22,9 +22,8 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create booking" do
     assert_difference("Booking.count") do
-      post bookings_url(locale: :fr), params: { booking: { user_id: @annick.id, event_id: @event.id  } }
+      post bookings_url(locale: :fr), params: { booking: { user_id: @current_user.id, event_id: @current_event.id  } }
     end
-
     assert_redirected_to booking_url(Booking.last, locale: :fr)
   end
 
