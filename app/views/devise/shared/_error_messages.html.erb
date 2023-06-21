@@ -1,3 +1,5 @@
+<h2>Form errors count: <%= resource.errors.count %> </h2>
+</br>
 <% resource.errors.full_messages.each do |message| %>
   <% p message %>
 <% end %>
