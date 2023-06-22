@@ -65,14 +65,14 @@
   </div>
 
   <div class="field form-group">
-    
+
     <%= form.number_field :organizer_id, id: :event_organizer_id, class:"form-control", value: current_user.id, type: :hidden %>
   </div>
 
   <br/>
 
   <div class="col-12">
-    <%= form.submit class: "btn btn-primary", id: 'kn-button' %>
+    <%= form.submit class: "button_to btn btn-primary", id: 'kn-button' %>
   </div>
 
 <% end %>
