@@ -1,14 +1,9 @@
-<h2>Form errors count: <%= resource.errors.count %> </h2>
-</br>
-<% resource.errors.full_messages.each do |message| %>
-  <% p message %>
-<% end %>
 <% if resource.errors.any? %>
   <div id="error_explanation" data-turbo-cache="false">
     <h2>
-      <%= I18n.t("errors.messages.not_saved",
+      <%= I18n.t( "errors.messages.not_saved",
                  count: resource.errors.count,
-                 resource: resource.class.model_name.human.downcase)
+              resource: resource.class.model_name.human.downcase )
        %>
     </h2>
     <ul>
@@ -18,3 +13,13 @@
     </ul>
   </div>
 <% end %>
+
+<div class="container">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+</div>
+
+
