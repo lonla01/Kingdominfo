@@ -29,7 +29,9 @@
     <br/>
 
     <div class="container kn-main">
+      <% if notice %>
         <%= render 'layouts/alerts' %>
+      <% end %>
 
       <%= yield %>
     </div>
@@ -39,7 +41,7 @@
     <footer>
 	    <div class="overlay">
         <%= render 'home/footer' %>
-		</div>
+		  </div>
     </footer>
 
     <!--
