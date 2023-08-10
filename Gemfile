@@ -80,3 +80,5 @@ gem "cssbundling-rails", "~> 1.1"
 gem "rails-i18n", "~> 7.0"
 
 gem "devise-i18n", "~> 1.11"
+
+gem "jsbundling-rails", "~> 1.1"
