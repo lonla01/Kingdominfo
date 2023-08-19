@@ -8,7 +8,7 @@ function Clock() {
   return (
     <div>
         <h1> You clicked {count} time! </h1>
-        <button onClick={() => setCount(count + 1)} className="_button">Click</button>
+        <button onClick={() => setCount(count + 1)} className="_button">Click here please!</button>
     </div>
   )
 }
