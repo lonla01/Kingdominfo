@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+
+    namespace :api do
+      namespace :v1 do
+        get 'event/index'
+        post 'event/create'
+        get '/show/:id', to: 'events#show'
+        delete '/destroy/:id', to: 'events#destroy'
+      end
+    end
+
     resources :bookings
     devise_for :users, controllers: {
            sessions: 'users/sessions',

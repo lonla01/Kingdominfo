@@ -40,7 +40,7 @@ class Event < ApplicationRecord
         end
         self.date_time = DateTime.new(d.year, d.month, d.day, t.hour, t.min, t.sec)
     end
- 
+
     def event_organizer
         organizer.pseudo
     end
