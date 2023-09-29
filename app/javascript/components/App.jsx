@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 // 1. import `NextUIProvider` component
 import { NextUIProvider, Card, Text, Col, Grid, Row, Button } from "@nextui-org/react";
-import Clock from "./Clock";
 import CardList from "./CardList"
 
 function KNApplication() {
@@ -10,7 +9,6 @@ function KNApplication() {
 
   return (
     <div className="KNApplication">
-        <Clock />
         <CardList />
     </div>
   )

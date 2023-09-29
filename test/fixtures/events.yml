@@ -2,11 +2,11 @@
 
 event1:
   photo_file_name: pict_1.jpg
-  phone_number: 697367956                                                 
-  title: Sortie Montagne                                                 
-  event_type: Plein air                                                          
-  date_time: 2023-04-12 15:55:09           
-  description: Explorons le Jura                                         
+  phone_number: 697367956
+  title: Sortie Montagne
+  event_type: Plein air
+  date_time: 2023-04-12 15:55:09
+  description: Explorons le Jura
   participant_count: 10
   address: Geneve
   directions: Route de Crepy
@@ -60,3 +60,182 @@ event5:
   directions: Yaounde, Châpiteau d'Akwa
   organizer: annick
 
+event6:
+  photo_file_name: pict_1.jpg
+  phone_number: 697367956
+  title: Sortie Montagne
+  event_type: Plein air
+  date_time: 2023-04-12 15:55:09
+  description: Explorons le Jura
+  participant_count: 10
+  address: Geneve
+  directions: Route de Crepy
+  organizer: patrice
+
+event7:
+  photo_file_name: pict_2.jpg
+  phone_number: 697367956
+  title: Vide Grenier
+  event_type: Commercial
+  date_time: 2023-05-01 10:15:09
+  description: Vide grenier à Fernay
+  participant_count: 6
+  address: Fernay
+  directions: Gare
+  organizer: serge
+
+event8:
+  photo_file_name: pict_3.jpg
+  phone_number: 697367956
+  title: Vide Grenier
+  event_type: Commercial
+  date_time: 2023-06-22 20:55:09
+  description: Vide grenier à Fernay
+  participant_count: 11
+  address: Fernay
+  directions: Gare
+  organizer: cedric
+
+event9:
+  photo_file_name: pict_4.jpg
+  phone_number: 677098756
+  title: Grande Campagne d'Evangelisaton
+  event_type: Evangelisation
+  date_time: 2023-06-12 17:55:09
+  description: Grande Campagne d'Evangélisation en plein air. Avec des évangélistes renommé. Au programme, prédication, guérisons, délivrances.
+  participant_count: 1000
+  address: Douala, Stade Mbappe
+  directions: Face Eglise Catholique d'Akwa, Douala, Cameroun
+  organizer: joelle
+
+event10:
+  photo_file_name: pict_5.jpg
+  phone_number: 680638242
+  title: Concert évangélique gospel avec predication
+  event_type: Musical
+  date_time: 2023-08-12 09:55:09
+  description: concert inédit pour la gloire du Seigneur. Suivi de témoignage et de la prédication de l'Evangile.
+  participant_count: 50
+  address: Salle Douala Bercy
+  directions: Yaounde, Châpiteau d'Akwa
+  organizer: annick
+
+event11:
+  photo_file_name: pict_1.jpg
+  phone_number: 697367956
+  title: Sortie Montagne
+  event_type: Plein air
+  date_time: 2023-04-12 15:55:09
+  description: Explorons le Jura
+  participant_count: 10
+  address: Geneve
+  directions: Route de Crepy
+  organizer: patrice
+
+event12:
+  photo_file_name: pict_2.jpg
+  phone_number: 697367956
+  title: Vide Grenier
+  event_type: Commercial
+  date_time: 2023-05-01 10:15:09
+  description: Vide grenier à Fernay
+  participant_count: 6
+  address: Fernay
+  directions: Gare
+  organizer: serge
+
+event13:
+  photo_file_name: pict_3.jpg
+  phone_number: 697367956
+  title: Vide Grenier
+  event_type: Commercial
+  date_time: 2023-06-22 20:55:09
+  description: Vide grenier à Fernay
+  participant_count: 11
+  address: Fernay
+  directions: Gare
+  organizer: cedric
+
+event14:
+  photo_file_name: pict_4.jpg
+  phone_number: 677098756
+  title: Grande Campagne d'Evangelisaton
+  event_type: Evangelisation
+  date_time: 2023-06-12 17:55:09
+  description: Grande Campagne d'Evangélisation en plein air. Avec des évangélistes renommé. Au programme, prédication, guérisons, délivrances.
+  participant_count: 1000
+  address: Douala, Stade Mbappe
+  directions: Face Eglise Catholique d'Akwa, Douala, Cameroun
+  organizer: joelle
+
+event15:
+  photo_file_name: pict_5.jpg
+  phone_number: 680638242
+  title: Concert évangélique gospel avec predication
+  event_type: Musical
+  date_time: 2023-08-12 09:55:09
+  description: concert inédit pour la gloire du Seigneur. Suivi de témoignage et de la prédication de l'Evangile.
+  participant_count: 50
+  address: Salle Douala Bercy
+  directions: Yaounde, Châpiteau d'Akwa
+  organizer: annick
+
+event16:
+  photo_file_name: pict_1.jpg
+  phone_number: 697367956
+  title: Sortie Montagne
+  event_type: Plein air
+  date_time: 2023-04-12 15:55:09
+  description: Explorons le Jura
+  participant_count: 10
+  address: Geneve
+  directions: Route de Crepy
+  organizer: patrice
+
+event17:
+  photo_file_name: pict_2.jpg
+  phone_number: 697367956
+  title: Vide Grenier
+  event_type: Commercial
+  date_time: 2023-05-01 10:15:09
+  description: Vide grenier à Fernay
+  participant_count: 6
+  address: Fernay
+  directions: Gare
+  organizer: serge
+
+event18:
+  photo_file_name: pict_3.jpg
+  phone_number: 697367956
+  title: Vide Grenier
+  event_type: Commercial
+  date_time: 2023-06-22 20:55:09
+  description: Vide grenier à Fernay
+  participant_count: 11
+  address: Fernay
+  directions: Gare
+  organizer: cedric
+
+event19:
+  photo_file_name: pict_4.jpg
+  phone_number: 677098756
+  title: Grande Campagne d'Evangelisaton
+  event_type: Evangelisation
+  date_time: 2023-06-12 17:55:09
+  description: Grande Campagne d'Evangélisation en plein air. Avec des évangélistes renommé. Au programme, prédication, guérisons, délivrances.
+  participant_count: 1000
+  address: Douala, Stade Mbappe
+  directions: Face Eglise Catholique d'Akwa, Douala, Cameroun
+  organizer: joelle
+
+event20:
+  photo_file_name: pict_5.jpg
+  phone_number: 680638242
+  title: Concert évangélique gospel avec predication
+  event_type: Musical
+  date_time: 2023-08-12 09:55:09
+  description: concert inédit pour la gloire du Seigneur. Suivi de témoignage et de la prédication de l'Evangile.
+  participant_count: 50
+  address: Salle Douala Bercy
+  directions: Yaounde, Châpiteau d'Akwa
+  organizer: annick
